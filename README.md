@@ -1,1 +1,1 @@
-# UTNFRA_SO_2do_TP_Quispe
+# UTNFRA_SO_2do_TP_Blanquis
