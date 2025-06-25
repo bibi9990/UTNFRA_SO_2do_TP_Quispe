@@ -1,0 +1,99 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-25 04:19:41,497 p=2031 u=blanquis n=ansible | PLAY [all] ********************************************************************************************
+2025-06-25 04:19:41,570 p=2031 u=blanquis n=ansible | TASK [Gathering Facts] ********************************************************************************
+2025-06-25 04:19:45,663 p=2031 u=blanquis n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-06-25 04:19:45,665 p=2031 u=blanquis n=ansible | ok: [localhost]
+2025-06-25 04:19:45,682 p=2031 u=blanquis n=ansible | TASK [include_role : 2do_parcial] *********************************************************************
+2025-06-25 04:19:45,736 p=2031 u=blanquis n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document. expected a single document in the stream
+  in "<unicode string>", line 4, column 1
+but found another document
+  in "<unicode string>", line 6, column 1
+
+The error appears to be in '/home/blanquis/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 6, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    msg: "Tareas del 2do Parcial"
+---
+^ here
+
+2025-06-25 04:26:47,568 p=2139 u=blanquis n=ansible | PLAY [all] ********************************************************************************************
+2025-06-25 04:26:47,595 p=2139 u=blanquis n=ansible | TASK [Gathering Facts] ********************************************************************************
+2025-06-25 04:26:50,655 p=2139 u=blanquis n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-06-25 04:26:50,658 p=2139 u=blanquis n=ansible | ok: [localhost]
+2025-06-25 04:26:50,670 p=2139 u=blanquis n=ansible | TASK [include_role : 2do_parcial] *********************************************************************
+2025-06-25 04:26:50,755 p=2139 u=blanquis n=ansible | included: 2do_parcial for localhost
+2025-06-25 04:26:50,767 p=2139 u=blanquis n=ansible | TASK [2do_parcial : debug] ****************************************************************************
+2025-06-25 04:26:50,800 p=2139 u=blanquis n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2025-06-25 04:26:50,814 p=2139 u=blanquis n=ansible | TASK [2do_parcial : Crear carpeta de alumno] **********************************************************
+2025-06-25 04:26:51,536 p=2139 u=blanquis n=ansible | changed: [localhost]
+2025-06-25 04:26:51,550 p=2139 u=blanquis n=ansible | TASK [2do_parcial : Crear carpeta de equipo] **********************************************************
+2025-06-25 04:26:51,994 p=2139 u=blanquis n=ansible | changed: [localhost]
+2025-06-25 04:26:52,040 p=2139 u=blanquis n=ansible | TASK [2do_parcial : Generar datos del alumno] *********************************************************
+2025-06-25 04:26:53,491 p=2139 u=blanquis n=ansible | changed: [localhost]
+2025-06-25 04:26:53,506 p=2139 u=blanquis n=ansible | TASK [2do_parcial : Generar datos del equipo] *********************************************************
+2025-06-25 04:26:54,315 p=2139 u=blanquis n=ansible | changed: [localhost]
+2025-06-25 04:26:54,331 p=2139 u=blanquis n=ansible | TASK [2do_parcial : Habilitar sudo sin password para grupo 2PSupervisores] ****************************
+2025-06-25 04:26:54,882 p=2139 u=blanquis n=ansible | fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/2PSupervisores): Permission denied"}
+2025-06-25 04:26:54,885 p=2139 u=blanquis n=ansible | PLAY RECAP ********************************************************************************************
+2025-06-25 04:26:54,887 p=2139 u=blanquis n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-25 04:33:55,793 p=2390 u=blanquis n=ansible | PLAY [all] ********************************************************************************************
+2025-06-25 04:33:55,821 p=2390 u=blanquis n=ansible | TASK [Gathering Facts] ********************************************************************************
+2025-06-25 04:33:59,022 p=2390 u=blanquis n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of
+that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-06-25 04:33:59,022 p=2390 u=blanquis n=ansible | ok: [localhost]
+2025-06-25 04:33:59,038 p=2390 u=blanquis n=ansible | TASK [include_role : 2do_parcial] *********************************************************************
+2025-06-25 04:33:59,090 p=2390 u=blanquis n=ansible | included: 2do_parcial for localhost
+2025-06-25 04:33:59,101 p=2390 u=blanquis n=ansible | TASK [2do_parcial : debug] ****************************************************************************
+2025-06-25 04:33:59,131 p=2390 u=blanquis n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2025-06-25 04:33:59,145 p=2390 u=blanquis n=ansible | TASK [2do_parcial : Crear carpeta de alumno] **********************************************************
+2025-06-25 04:33:59,952 p=2390 u=blanquis n=ansible | ok: [localhost]
+2025-06-25 04:33:59,963 p=2390 u=blanquis n=ansible | TASK [2do_parcial : Crear carpeta de equipo] **********************************************************
+2025-06-25 04:34:00,533 p=2390 u=blanquis n=ansible | ok: [localhost]
+2025-06-25 04:34:00,543 p=2390 u=blanquis n=ansible | TASK [2do_parcial : Generar datos del alumno] *********************************************************
+2025-06-25 04:34:01,777 p=2390 u=blanquis n=ansible | ok: [localhost]
+2025-06-25 04:34:01,790 p=2390 u=blanquis n=ansible | TASK [2do_parcial : Generar datos del equipo] *********************************************************
+2025-06-25 04:34:02,651 p=2390 u=blanquis n=ansible | ok: [localhost]
+2025-06-25 04:34:02,666 p=2390 u=blanquis n=ansible | TASK [2do_parcial : Habilitar sudo sin password para grupo 2PSupervisores] ****************************
+2025-06-25 04:34:03,967 p=2390 u=blanquis n=ansible | changed: [localhost]
+2025-06-25 04:34:03,989 p=2390 u=blanquis n=ansible | TASK [Otra tarea] *************************************************************************************
+2025-06-25 04:34:04,016 p=2390 u=blanquis n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-25 04:34:04,022 p=2390 u=blanquis n=ansible | PLAY RECAP ********************************************************************************************
+2025-06-25 04:34:04,023 p=2390 u=blanquis n=ansible | localhost                  : ok=9    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
